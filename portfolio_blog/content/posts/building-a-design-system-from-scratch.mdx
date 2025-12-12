@@ -1,0 +1,79 @@
+---
+title: "Building a Design System from Scratch"
+date: "2024-12-10"
+summary: "A deep dive into the process of building a cohesive design system with Tailwind CSS, custom tokens, and component variants."
+tags: ["Design Systems", "Tailwind CSS", "Frontend", "React"]
+status: "published"
+---
+
+## Introduction
+
+Creating a design system from scratch is one of the most rewarding challenges in frontend development. It requires careful planning, thoughtful token architecture, and a deep understanding of how components will be used across an application.
+
+In this post, I'll walk through the process of building a **copper-themed design system** that balances industrial aesthetics with modern web development practices.
+
+## The Foundation: Design Tokens
+
+The first step in any design system is establishing a robust token foundation. We started with a warm, paper-like palette:
+
+- **Background**: `hsl(40 33% 93%)` - A crème canvas that feels tactile
+- **Foreground**: `hsl(30 6% 16%)` - Deep charcoal for excellent readability
+- **Primary**: `hsl(28 56% 46%)` - Copper accent for brand moments
+
+These tokens cascade through the entire system, ensuring consistency without rigidity.
+
+## Typography Hierarchy
+
+Typography is where personality really shines through. We chose three complementary typefaces:
+
+1. **DM Serif Display** - For headings and titles
+2. **Source Sans 3** - For body copy and UI elements
+3. **JetBrains Mono** - For labels, tags, and technical data
+
+### Implementation Example
+
+```typescript
+const serif = DM_Serif_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+```
+
+This approach uses CSS variables to make fonts globally accessible while maintaining performance through Next.js font optimization.
+
+## Component Patterns
+
+Every component in the system follows the same principles:
+
+- Subtle borders and shadows
+- Copper hover states for interactivity
+- Consistent border radius (`0.25rem`)
+- Uppercase mono labels for technical precision
+
+### Button Variants
+
+We implemented three core button variants:
+
+1. **Primary** - Copper gradient with shadow
+2. **Ghost** - Transparent with copper hover
+3. **Outline** - Border-first with copper focus
+
+## Animation Philosophy
+
+Motion should be deliberate and mechanical. We implemented three core animations:
+
+- `spin-slow` (20s) - For decorative gears
+- `fade-in-up` (0.8s) - For page entry
+- `bounce-soft` (1s) - For scroll indicators
+
+All animations respect `prefers-reduced-motion` for accessibility.
+
+## Conclusion
+
+Building a design system is an iterative process. Start with solid foundations, establish clear patterns, and let the system evolve with your product.
+
+> "Good design is obvious. Great design is transparent." — Joe Sparano
+
+The copper design system is now live and powering this portfolio. You can explore the implementation in the project repo.
