@@ -29,11 +29,13 @@
 - Font variables injected into `<body>` via CSS custom properties for use in Tailwind classes.
 
 ## Components & UI
-- **shadcn/ui Components**: Button (copper variants), Card (with Header/Title/Description/Content/Footer), Badge (subtle border style), Avatar (image + fallback), Separator.
+- **shadcn/ui Components**: Button (copper variants), Card (with Header/Title/Description/Content/Footer), Badge (subtle border style), Avatar (image + fallback), Separator, Form, Input, Textarea, Label.
+- **Form Validation**: React Hook Form with Zod for type-safe schema validation and error handling.
 - **Custom Layout Components**:
   - `SiteHeader`: Sticky header with copper gradient logo, uppercase mono navigation
   - `SiteFooter`: Footer with copyright and tech attribution
   - `PageContainer`: Max-width wrapper for consistent content width
+  - `ContactForm`: Contact form on `/about` page with validation, character count, and success feedback
 - **Icon Library**: lucide-react (0.561.0) for consistent, lightweight UI icons with hover animations.
 - **Radix UI**: Underlying component primitives (@radix-ui/react-slot, @radix-ui/react-avatar, @radix-ui/react-separator) for unstyled, accessible building blocks.
 
@@ -59,10 +61,10 @@
 - `src/app/blog/[slug]/page.tsx`: Blog detail page with metadata and MDX body rendering.
 - `src/app/projects/page.tsx`: Projects showcase in 2-column grid with featured badges.
 - `src/app/projects/[slug]/page.tsx`: Project detail page with links and tech stack.
-- `src/app/about/page.tsx`: About page with avatar, bio, and professional information.
+- `src/app/about/page.tsx`: About page with avatar, bio, and contact form for user inquiries.
 - `src/app/uses/page.tsx`: Uses page (tools and software breakdown).
-- `src/components/ui/`: shadcn/ui component library (Button, Card, Badge, Avatar, Separator).
-- `src/components/`: Shared layout and page components (SiteHeader, SiteFooter, PageContainer, HomeContent).
+- `src/components/ui/`: shadcn/ui component library (Button, Card, Badge, Avatar, Separator, Form, Input, Textarea, Label).
+- `src/components/`: Shared layout and page components (SiteHeader, SiteFooter, PageContainer, HomeContent, ContactForm).
 - `src/lib/content.ts`: Content loading and parsing logic.
 - `src/lib/utils.ts`: Helper functions (cn, class composition, formatDate).
 - `src/lib/mdx-components.tsx`: Custom styled MDX component definitions for rendering headings, paragraphs, lists, code blocks, links, tables, blockquotes, images, and more.
@@ -92,6 +94,7 @@
 ## Dependencies Overview
 - **Core**: next 16.0.10, react 19.2.1, react-dom 19.2.1
 - **Content**: next-mdx-remote 5.0.0, gray-matter 4.0.3
+- **Forms**: react-hook-form 7.x, zod 3.x, @hookform/resolvers 3.x
 - **Styling**: tailwindcss 4, @tailwindcss/postcss 4, tw-animate-css 1.4.0
 - **Components**: lucide-react 0.561.0, class-variance-authority 0.7.1, clsx 2.1.1, tailwind-merge 3.4.0
 - **Radix UI Primitives**: @radix-ui/react-avatar, @radix-ui/react-separator, @radix-ui/react-slot
