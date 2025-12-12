@@ -1,8 +1,9 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { ContactForm } from "@/components/contact-form";
 
 export default function AboutPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center animate-fade-in-up">
         <Avatar className="h-40 w-40 border-2 border-border shadow-soft">
           <AvatarImage src="/avatar.jpg" alt="Profile picture" />
@@ -23,6 +24,10 @@ export default function AboutPage() {
         <p className="text-muted-foreground">
           Add your personal story, what you do, your design philosophy, and how people can reach you.
         </p>
+      </div>
+
+      <div className="max-w-2xl animate-fade-in-up animate-delay-200">
+        <ContactForm />
       </div>
     </div>
   );

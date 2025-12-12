@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 export const mdxComponents = {
   h1: ({ children }: { children: React.ReactNode }) => (
