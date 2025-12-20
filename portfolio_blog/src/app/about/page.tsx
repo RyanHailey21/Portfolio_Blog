@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <div className="space-y-12">
       <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center animate-fade-in-up">
-        <Avatar className="h-40 w-40 border-2 border-border shadow-soft">
+        <Avatar className="h-40 w-40">
           <AvatarImage src="/avatar.jpg" alt="Profile picture" />
           <AvatarFallback className="bg-copper-gradient text-primary-foreground text-4xl">RH</AvatarFallback>
         </Avatar>

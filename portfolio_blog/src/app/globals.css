@@ -81,8 +81,12 @@
   --copper-gradient: linear-gradient(135deg, var(--copper-start) 0%, var(--copper-mid) 50%, var(--copper-end) 100%);
 
   /* Blueprint grid */
-  --grid-pattern: linear-gradient(#b873330d 1px, transparent 1px), linear-gradient(90deg, #b873330d 1px, transparent 1px);
-  --grid-size: 40px 40px;
+  --grid-pattern: 
+    linear-gradient(#b873331a 1.5px, transparent 1.5px),
+    linear-gradient(90deg, #b873331a 1.5px, transparent 1.5px),
+    linear-gradient(#b8733308 1px, transparent 1px),
+    linear-gradient(90deg, #b8733308 1px, transparent 1px);
+  --grid-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
 
   /* Charts/placeholders */
   --chart-1: oklch(0.646 0.222 41.116);

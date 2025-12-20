@@ -44,7 +44,7 @@ export function HomeContent({ projects, posts }: HomeProps) {
           Portfolio · Writing · Projects
         </p>
         <div className="space-y-4 animate-fade-in-up animate-delay-150">
-          <Avatar className="mb-4 h-40 w-40 border-2 border-border shadow-soft">
+          <Avatar className="mb-4 h-40 w-40">
             <AvatarImage src="/avatar.jpg" alt="Profile picture" />
             <AvatarFallback className="bg-copper-gradient text-primary-foreground text-4xl">RH</AvatarFallback>
           </Avatar>
